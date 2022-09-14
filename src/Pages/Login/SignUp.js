@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-// import useToken from '../../hooks/useToken';
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -20,7 +20,7 @@ const SignUp = () => {
     let signInError;
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
-    // const [token] = useToken(user || gUser);
+    const [token] = useToken(user || gUser);
 
     const onSubmit = async (data) => {
         console.log(data);
@@ -40,7 +40,7 @@ const SignUp = () => {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
 
-    if (user || gUser) {
+    if (token) {
         navigate(from, { replace: true });
     }
 
