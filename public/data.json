@@ -1,0 +1,29 @@
+[
+    {
+        "_id": 1,
+        "name": "Quick Shifter ",
+        "img": "https://i.ibb.co/6ZL4nWW/shifter.jpg",
+        "desc": " Quick shifters have become quite common among street motorcycles because it provides a clutchless transmission.",
+        "price": 800,
+        "qty": 10000,
+        "minOrderQty": 100
+    },
+    {
+        "_id": 2,
+        "name": "Bike Gear ",
+        "img": "https://i.ibb.co/W68fRQf/bike-gear.jpg",
+        "desc": "Sportbike Track Gear offers one of the best selections of motorcycle gear in the industry. ",
+        "price": 1100,
+        "qty": 8000,
+        "minOrderQty": 150
+    },
+    {
+        "_id": 3,
+        "name": "Wheel Spokes",
+        "img": "https://i.ibb.co/0CfvCmJ/motorcycle-wheel-spokes.jpg ",
+        "desc": "To make your spoke kit, we will need your motorcycle's information.",
+        "price": 500,
+        "qty": 5000,
+        "minOrderQty": 50
+    }
+]
