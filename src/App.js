@@ -20,6 +20,7 @@ import ManageAllOrders from './Pages/DashBoard/ManageAllOrders';
 import AddProduct from './Pages/DashBoard/AddProduct';
 import MakeAdmin from './Pages/DashBoard/MakeAdmin';
 import ManageProducts from './Pages/DashBoard/ManageProducts';
+import Payment from './Pages/DashBoard/Payment';
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
               <ManageProducts></ManageProducts>
             </RequireAdmin>
           }></Route>
+          <Route path='payment/:orderId' element={<Payment></Payment>}></Route>
         </Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>

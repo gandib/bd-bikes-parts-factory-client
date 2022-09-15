@@ -14,6 +14,7 @@ const Purchase = () => {
     const [error, setError] = useState('');
 
 
+
     useEffect(() => {
         const url = `http://localhost:5000/parts/${id}`;
         fetch(url)
@@ -24,13 +25,16 @@ const Purchase = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
+        const totalPrice = orderQuantity * parts?.price;
+        console.log(totalPrice)
         const order = {
             name: user?.displayName,
             email: user?.email,
             partsName: parts?.name,
             address: event.target.address.value,
             phone: event.target.phone.value,
-            quantity: orderQuantity
+            quantity: orderQuantity,
+            totalPrice
         }
         console.log(order)
         fetch('http://localhost:5000/order', {
@@ -52,7 +56,7 @@ const Purchase = () => {
 
             })
 
-        // console.log(name, email, partsName, address, phone, quantity)
+        event.target.reset();
     }
 
 
@@ -70,7 +74,7 @@ const Purchase = () => {
             setError('');
         }
 
-        console.log(quantity)
+        console.log(quantity);
     }
 
 
