@@ -54,7 +54,7 @@ const Purchase = () => {
                     toast.error("Failed to place an order");
                 }
 
-            })
+            });
 
         event.target.reset();
     }

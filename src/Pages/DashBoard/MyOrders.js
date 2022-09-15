@@ -14,27 +14,7 @@ import DeleteOrderModal from './DeleteOrderModal';
 const MyOrders = () => {
     const [user] = useAuthState(auth);
     const [deleteOrder, setDeleteOrder] = useState(null);
-    // const [orders, setOrders] = useState([]);
-    // const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     const email = user?.email;
-    //     const getMyOrders = async () => {
-    //         const url = `http://localhost:5000/order?email=${email}`;
-    //         try {
-    //             const { data } = await axiosPrivate.get(url);
-    //             setOrders(data);
-    //         }
-    //         catch (error) {
-    //             console.log(error.message)
-    //             if (error.response.status === 401 || error.response.status === 403) {
-    //                 signOut(auth);
-    //                 navigate('/login');
-    //             }
-    //         }
-    //     }
-    //     getMyOrders();
-    // }, [user, navigate]);
 
     const { data: orders, isLoading, refetch } = useQuery(['orders'], () =>
         fetch(`http://localhost:5000/order?email=${user?.email}`, {
@@ -49,23 +29,6 @@ const MyOrders = () => {
         return <Loading></Loading>
     }
 
-    // const handleDelete = async (id) => {
-    //     const url = `http://localhost:5000/order/${id}`;
-    //     fetch(url, {
-    //         method: 'DELETE',
-    //         headers: {
-    //             authorization: `Bearer ${localStorage.getItem('accessToken')}`
-    //         }
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             if (data.deletedCount) {
-    //                 toast.success("Successfully canceled your order");
-    //                 refetch();
-    //             }
-    //         });
-    // }
 
     return (
         <div>
