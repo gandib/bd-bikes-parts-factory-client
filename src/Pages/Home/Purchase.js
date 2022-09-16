@@ -34,7 +34,8 @@ const Purchase = () => {
             address: event.target.address.value,
             phone: event.target.phone.value,
             quantity: orderQuantity,
-            totalPrice
+            totalPrice,
+            status: 'pending'
         }
         console.log(order)
         fetch('http://localhost:5000/order', {

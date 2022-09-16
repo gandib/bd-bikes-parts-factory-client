@@ -44,6 +44,7 @@ const MyOrders = () => {
                             <th>Phone</th>
                             <th>Quantity</th>
                             <th>Total Price</th>
+                            <th>Status</th>
                             <th>Action</th>
                             <th>Transaction Id</th>
                         </tr>
@@ -58,12 +59,11 @@ const MyOrders = () => {
                                 <td>{order.phone}</td>
                                 <td>{order.quantity}</td>
                                 <td>{order.totalPrice}</td>
+                                <td>{order.status}</td>
                                 <td>
                                     {(order.totalPrice && !order.paid) &&
                                         <>
                                             <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>
-
-                                            {/* <button onClick={() => handleDelete(order._id)} className='btn btn-xs bg-red-700 ml-2'>Cancel</button> */}
 
                                             <label onClick={() => setDeleteOrder(order)} htmlFor="delete-confirm-modal" className="btn btn-xs btn-error ml-2">Cancel</label>
                                         </>
