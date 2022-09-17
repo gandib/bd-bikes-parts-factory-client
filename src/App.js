@@ -21,6 +21,7 @@ import AddProduct from './Pages/DashBoard/AddProduct';
 import MakeAdmin from './Pages/DashBoard/MakeAdmin';
 import ManageProducts from './Pages/DashBoard/ManageProducts';
 import Payment from './Pages/DashBoard/Payment';
+import Footer from './Pages/Shared/Footer';
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer />
     </div>
   );
