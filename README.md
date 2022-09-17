@@ -1,6 +1,25 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# [Live Server Link]()
+
+# [Client Side Private Repo Link](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-gandib)
+https://github.com/programming-hero-web-course1/manufacturer-website-client-side-gandib
+
+
+# [Server Side Private Repo Link](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-gandib)
+https://github.com/programming-hero-web-course1/manufacturer-website-server-side-gandib
+
+
+# Using Bullet Points for Describing My Project
+* Home page contains a banner, parts, reviews and a footer.
+* Using Tailwind
+* Using Daisyui
+* Using React Router
+* Using React Firebase Hooks
+* Using React Toastify
+* Using MongoDB Database
+* Using Heroku To Host MongoDB Database
+* Using React Form Hooks, React Query and so on.
 
 ## Available Scripts
 
