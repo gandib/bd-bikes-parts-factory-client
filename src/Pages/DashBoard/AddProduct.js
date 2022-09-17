@@ -55,6 +55,8 @@ const AddProduct = () => {
                 console.log('imgbb', result);
             });
     }
+
+
     return (
         <div>
             <h2 className='text-2xl'>Add a Product</h2>
