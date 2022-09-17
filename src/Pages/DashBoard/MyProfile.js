@@ -87,9 +87,9 @@ const MyProfile = () => {
     return (
         <div>
 
-            <div className='grid grid-cols-2'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-col-2 gap-5'>
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <div class="">
+                    <div class="card-body">
                         <h2 class="card-title mt-10">My Profile</h2>
                         <p className='mt-5'>Name: {user?.displayName}</p>
                         <p>Email: {user?.email}</p>
