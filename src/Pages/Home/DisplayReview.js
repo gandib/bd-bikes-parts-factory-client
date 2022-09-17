@@ -17,7 +17,7 @@ const DisplayReview = ({ review }) => {
     return (
         <div className="card w-96 bg-base-100 shadow-xl mb-5">
             <div className="card-body">
-                <h2 className="card-title">By {review.name}</h2>
+                <h2 className="card-title">{review.name}</h2>
                 <p className='card-text'>{review.description}</p>
                 <div className="rating justify-center mb-5 mt-5">
                     <input type="radio" name="rating-4" value='1' className="mask mask-star-2 bg-green-500" checked={value === 1} disabled />

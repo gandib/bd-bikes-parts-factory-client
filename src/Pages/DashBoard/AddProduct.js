@@ -27,9 +27,9 @@ const AddProduct = () => {
                         name: data.name,
                         img: img,
                         desc: data.desc,
-                        price: data.price,
-                        qty: data.qty,
-                        minOrderQty: data.minOrderQty
+                        price: parseInt(data.price),
+                        qty: parseInt(data.qty),
+                        minOrderQty: parseInt(data.minOrderQty)
                     }
                     // send to database
                     fetch('http://localhost:5000/parts', {

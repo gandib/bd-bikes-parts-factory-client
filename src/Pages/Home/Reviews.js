@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
-import DisplayReview from '../DashBoard/DisplayReview';
+import DisplayReview from './DisplayReview';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -32,14 +32,20 @@ const Reviews = () => {
 
     }, [navigate]);
 
+    // sorting array
+    const mapped = reviews.map((v, i) => {
+        return { i, value: (v) };
+    });
+    const descReviews = mapped.sort((a, b) => (b.i) - (a.i));
+
     return (
         <div>
             <h2 className='text-5xl font-bold mt-10 mb-5'>Reviews</h2>
             <div className='grid lg:grid-cols-3 gap-10'>
                 {
-                    reviews?.map(review => <DisplayReview
+                    descReviews?.map(review => <DisplayReview
                         key={review._id}
-                        review={review}
+                        review={review.value}
                     ></DisplayReview>)
                 }
             </div>
