@@ -15,7 +15,7 @@ const Reviews = () => {
 
     useEffect(() => {
         const getMyReviews = async () => {
-            const url = `https://agile-tundra-59085.herokuapp.com/review`;
+            const url = `https://rocky-sierra-81256.herokuapp.com/review`;
             try {
                 const { data } = await axiosPrivate.get(url);
                 setReviews(data);

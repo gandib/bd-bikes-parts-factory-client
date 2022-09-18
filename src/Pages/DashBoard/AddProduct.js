@@ -32,7 +32,7 @@ const AddProduct = () => {
                         minOrderQty: parseInt(data.minOrderQty)
                     }
                     // send to database
-                    fetch('https://agile-tundra-59085.herokuapp.com/parts', {
+                    fetch('https://rocky-sierra-81256.herokuapp.com/parts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

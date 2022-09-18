@@ -17,7 +17,7 @@ const CheckoutForm = ({ order }) => {
 
 
     useEffect(() => {
-        fetch('https://agile-tundra-59085.herokuapp.com/create-payment-intent', {
+        fetch('https://rocky-sierra-81256.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -83,7 +83,7 @@ const CheckoutForm = ({ order }) => {
                 order: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://agile-tundra-59085.herokuapp.com/order/${_id}`, {
+            fetch(`https://rocky-sierra-81256.herokuapp.com/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

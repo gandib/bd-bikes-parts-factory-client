@@ -16,7 +16,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        const url = `https://agile-tundra-59085.herokuapp.com/parts/${id}`;
+        const url = `https://rocky-sierra-81256.herokuapp.com/parts/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setParts(data));
@@ -38,7 +38,7 @@ const Purchase = () => {
             status: 'pending'
         }
         console.log(order)
-        fetch('https://agile-tundra-59085.herokuapp.com/order', {
+        fetch('https://rocky-sierra-81256.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

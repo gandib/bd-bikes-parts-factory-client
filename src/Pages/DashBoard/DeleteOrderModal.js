@@ -5,7 +5,7 @@ const DeleteOrderModal = ({ deleteOrder, setDeleteOrder, refetch }) => {
     const { partsName, _id } = deleteOrder;
 
     const handleDelete = async () => {
-        const url = `https://agile-tundra-59085.herokuapp.com/order/${_id}`;
+        const url = `https://rocky-sierra-81256.herokuapp.com/order/${_id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {

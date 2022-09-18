@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 const ManageAllOrders = () => {
     const [deleteOrder, setDeleteOrder] = useState(null);
     const { data: allOrders, isLoading, refetch } = useQuery(['allOrders'], () =>
-        fetch(`https://agile-tundra-59085.herokuapp.com/orders`, {
+        fetch(`https://rocky-sierra-81256.herokuapp.com/orders`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -23,7 +23,7 @@ const ManageAllOrders = () => {
     const handleStatus = (id) => {
         const status = 'Shipped';
         const currentStatus = { status: status };
-        const url = `https://agile-tundra-59085.herokuapp.com/orders/${id}`;
+        const url = `https://rocky-sierra-81256.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

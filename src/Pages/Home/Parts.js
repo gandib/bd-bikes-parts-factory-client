@@ -6,7 +6,7 @@ import DisplayParts from './DisplayParts';
 const Parts = () => {
     const [parts, setParts] = useState([]);
     useEffect(() => {
-        fetch('https://agile-tundra-59085.herokuapp.com/parts')
+        fetch('https://rocky-sierra-81256.herokuapp.com/parts')
             .then(res => res.json())
             .then(data => setParts(data));
     }, []);

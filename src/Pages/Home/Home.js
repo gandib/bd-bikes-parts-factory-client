@@ -1,7 +1,7 @@
 import React from 'react';
+import Faq from '../DashBoard/Faq';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
-import ComingSoonParts from './ComingSoonParts';
 import Parts from './Parts';
 import ProductsRequest from './ProductsRequest';
 import Reviews from './Reviews';
@@ -13,9 +13,8 @@ const Home = () => {
             <Parts></Parts>
             <Reviews></Reviews>
             <BusinessSummary></BusinessSummary>
-            <ComingSoonParts></ComingSoonParts>
             <ProductsRequest></ProductsRequest>
-
+            <Faq></Faq>
         </div>
     );
 };

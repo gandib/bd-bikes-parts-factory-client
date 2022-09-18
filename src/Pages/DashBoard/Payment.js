@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51LgoZgK79rUC6lA1ZTZO0CCHKVoEkbm8E6Q6M
 
 const Payment = () => {
     const { orderId } = useParams();
-    const url = `https://agile-tundra-59085.herokuapp.com/order/${orderId}`;
+    const url = `https://rocky-sierra-81256.herokuapp.com/order/${orderId}`;
 
     const { data: order, isLoading } = useQuery(['orders', orderId], () =>
         fetch(url, {
