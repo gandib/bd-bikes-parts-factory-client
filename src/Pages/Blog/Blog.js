@@ -5,21 +5,21 @@ const Blog = () => {
         <div>
             <h2 className='text-5xl font-bold mt-10 mb-5'>My Blog</h2>
             <p className='text-red-500 font-bold'>1. Question: How will you improve the performance of a React Application?</p>
-            <p className='mb-5'>Answer: We can use several techniques to improve the performance of the application:
+            <div className='mb-5'>Answer: We can use several techniques to improve the performance of the application:
                 <p>1. Use binding functions in constructors</p>
                 <p>2. Avoid inline style attributes</p>
                 <p>3. Avoid extra tags by using React fragments</p>
                 <p>4. Avoid inline function in the render method</p>
                 <p>5. Avoid bundling all of the front end code in a single file</p>
-            </p>
+            </div>
 
             <p className='text-red-500 font-bold'>2. Question: What are the different ways to manage a state in a React application?</p>
-            <p className='mb-5'>Answer: There are four main types of state you need to properly manage in React apps: these are Local state, Global state, Server state and URL state.
+            <div className='mb-5'>Answer: There are four main types of state you need to properly manage in React apps: these are Local state, Global state, Server state and URL state.
                 <p>Local state: Local state is data we manage in one or another component.</p>
                 <p>Global state: Global state is data we manage across multiple components.</p>
                 <p>Server state: Data that comes from an external server that must be integrated with our UI state.</p>
                 <p>URL state: Data that exists on our URLs, including the pathname and query parameters.</p>
-            </p>
+            </div>
 
 
             <p className='text-red-500 font-bold'>3. Question: How does prototypical inheritance work?</p>
@@ -31,14 +31,14 @@ const Blog = () => {
 
 
             <p className='text-red-500 font-bold'>5. Question: You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</p>
-            <p className='mb-5'>Answer:
-                <div class="mockup-code">
+            <div className='mb-5'>Answer:
+                <div className="mockup-code">
                     <pre data-prefix='const'>handleSearchByName = (name)</pre><pre data-prefix=' => {'></pre>
                     <pre data-prefix="const"><code>findProducts = products.filter(product <pre data-prefix='=>'></pre> product.name.toLowerCase() === name.toLowerCase());
                         setSearchedProduct(findProducts);
                         <pre data-prefix='}'></pre></code></pre>
                 </div>
-            </p>
+            </div>
 
 
             <p className='text-red-500 font-bold'>6. Question: What is a unit test? Why should write unit tests?</p>

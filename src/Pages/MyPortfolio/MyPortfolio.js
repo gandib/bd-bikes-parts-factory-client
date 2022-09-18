@@ -3,9 +3,9 @@ import React from 'react';
 const MyPortfolio = () => {
     return (
         <div className='flex justify-center items-center mt-10'>
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title"><span className='font-bold'>Name: </span> Gandib Dhari Roy</h2>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title"><span className='font-bold'>Name: </span> Gandib Dhari Roy</h2>
                     <p className=''><span className='font-bold'>Email: </span>gandibroy11@gmail.com</p>
 
                     <p className=''><span className='font-bold'>Educational Background: </span>Bachelor of arts with Honours in English, National University, Bangladesh.</p>

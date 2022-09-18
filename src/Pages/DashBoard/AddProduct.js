@@ -32,7 +32,7 @@ const AddProduct = () => {
                         minOrderQty: parseInt(data.minOrderQty)
                     }
                     // send to database
-                    fetch('http://localhost:5000/parts', {
+                    fetch('https://agile-tundra-59085.herokuapp.com/parts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -6,7 +6,7 @@ import DeleteProductModal from './DeleteProductModal';
 const ManageProducts = () => {
     const [deleteProduct, setDeleteProduct] = useState(null);
     const { data: allParts, isLoading, refetch } = useQuery(['allProducts'], () =>
-        fetch(`http://localhost:5000/parts`, {
+        fetch(`https://agile-tundra-59085.herokuapp.com/parts`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -35,8 +35,8 @@ const ManageProducts = () => {
                         {
                             allParts.map((parts, index) => <tr key={index}>
                                 <th>{index + 1}</th>
-                                <td><div class="avatar">
-                                    <div class="w-12 rounded-xl">
+                                <td><div className="avatar">
+                                    <div className="w-12 rounded-xl">
                                         <img src={parts.img} alt={parts.name} />
                                     </div>
                                 </div></td>

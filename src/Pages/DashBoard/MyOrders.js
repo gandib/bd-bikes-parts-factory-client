@@ -16,8 +16,8 @@ const MyOrders = () => {
     const [deleteOrder, setDeleteOrder] = useState(null);
 
 
-    const { data: orders, isLoading, refetch } = useQuery(['orders'], () =>
-        fetch(`http://localhost:5000/order?email=${user?.email}`, {
+    const { data: orders, isLoading, refetch } = useQuery(['order'], () =>
+        fetch(`https://agile-tundra-59085.herokuapp.com/order?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -32,7 +32,7 @@ const MyOrders = () => {
 
     return (
         <div>
-            <h2>My Orders {orders.length}</h2>
+            <h2>My Orders</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
@@ -51,7 +51,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) => <tr key={index}>
+                            orders?.map((order, index) => <tr key={index}>
                                 <th>{index + 1}</th>
                                 <td>{order.name}</td>
                                 <td>{order.partsName}</td>

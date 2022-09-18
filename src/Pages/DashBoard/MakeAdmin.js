@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 
 const MakeAdmin = () => {
     const { data: users, isLoading, refetch } = useQuery(['users'], () =>
-        fetch(`http://localhost:5000/user`, {
+        fetch(`https://agile-tundra-59085.herokuapp.com/user`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -19,7 +19,7 @@ const MakeAdmin = () => {
 
 
     const makeAdmin = (email) => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://agile-tundra-59085.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -60,7 +60,7 @@ const MakeAdmin = () => {
                                 <td>{user.displayName}</td>
                                 <td>{user.email}</td>
                                 <td>
-                                    <td>{user.role === 'admin' ? 'Admin' : <button onClick={() => makeAdmin(user.email)} class="btn btn-xs">Make Admin</button>}</td>
+                                    {user.role === 'admin' ? 'Admin' : <button onClick={() => makeAdmin(user.email)} className="btn btn-xs">Make Admin</button>}
                                 </td>
                             </tr>)
                         }

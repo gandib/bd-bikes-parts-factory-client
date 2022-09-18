@@ -16,7 +16,7 @@ const MyProfile = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/userprofiles/${user?.email}`, {
+        fetch(`https://agile-tundra-59085.herokuapp.com/userprofiles/${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -44,7 +44,7 @@ const MyProfile = () => {
             linkedin: linkedin
         }
         // send to database
-        const url = `http://localhost:5000/userprofile/${user?.email}`;
+        const url = `https://agile-tundra-59085.herokuapp.com/userprofile/${user?.email}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -88,9 +88,9 @@ const MyProfile = () => {
         <div>
 
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-col-2 gap-5'>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title mt-10">My Profile</h2>
+                <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title mt-10">My Profile</h2>
                         <p className='mt-5'>Name: {user?.displayName}</p>
                         <p>Email: {user?.email}</p>
                         <p>Education: {userProfile[0]?.education}</p>
@@ -100,9 +100,9 @@ const MyProfile = () => {
                     </div>
                 </div>
 
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">Update Profile</h2>
+                <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">Update Profile</h2>
 
                         <form onSubmit={handleSubmit} >
 

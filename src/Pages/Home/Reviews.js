@@ -15,7 +15,7 @@ const Reviews = () => {
 
     useEffect(() => {
         const getMyReviews = async () => {
-            const url = `http://localhost:5000/review`;
+            const url = `https://agile-tundra-59085.herokuapp.com/review`;
             try {
                 const { data } = await axiosPrivate.get(url);
                 setReviews(data);
@@ -43,8 +43,8 @@ const Reviews = () => {
             <h2 className='text-5xl font-bold mt-10 mb-5'>Reviews</h2>
             <div className='grid lg:grid-cols-3 gap-10'>
                 {
-                    descReviews?.map(review => <DisplayReview
-                        key={review._id}
+                    descReviews?.map((review, index) => <DisplayReview
+                        key={index}
                         review={review.value}
                     ></DisplayReview>)
                 }

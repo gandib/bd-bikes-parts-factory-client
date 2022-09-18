@@ -17,7 +17,7 @@ const AddReview = () => {
             description: event.target.description.value,
             rating: ratingValue
         }
-        fetch('http://localhost:5000/review', {
+        fetch('https://agile-tundra-59085.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

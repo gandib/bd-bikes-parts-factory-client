@@ -1,14 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Loading from '../Shared/Loading';
 import DeleteOrderModal from './DeleteOrderModal';
+import { toast } from 'react-toastify';
 
 const ManageAllOrders = () => {
     const [deleteOrder, setDeleteOrder] = useState(null);
     const { data: allOrders, isLoading, refetch } = useQuery(['allOrders'], () =>
-        fetch(`http://localhost:5000/orders`, {
+        fetch(`https://agile-tundra-59085.herokuapp.com/orders`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -18,6 +18,30 @@ const ManageAllOrders = () => {
 
     if (isLoading) {
         return <Loading></Loading>
+    }
+
+    const handleStatus = (id) => {
+        const status = 'Shipped';
+        const currentStatus = { status: status };
+        const url = `https://agile-tundra-59085.herokuapp.com/orders/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            },
+            body: JSON.stringify(currentStatus)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data) {
+                    toast.success("Status updated successfully");
+                }
+                else {
+                    toast.error("Failed to updated status!");
+                }
+            })
     }
 
     return (
@@ -38,13 +62,13 @@ const ManageAllOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            allOrders.map((order, index) => <tr key={index}>
+                            allOrders?.map((order, index) => <tr key={index}>
                                 <th>{index + 1}</th>
                                 <td>{order.name}</td>
                                 <td>{order.partsName}</td>
                                 <td>{order.quantity}</td>
                                 <td>{order.totalPrice}</td>
-                                <td><button className='btn btn-xs' disabled={!order.paid}>{order.status}</button></td>
+                                <td><button onClick={() => handleStatus(order._id)} className='btn btn-xs' disabled={!order.paid}>{order.status}</button></td>
                                 <td>
                                     {(order.totalPrice && !order.paid) &&
                                         <>

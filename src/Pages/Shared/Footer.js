@@ -4,30 +4,30 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className='mt-10'>
-            <footer class="footer p-10 bg-base-200 text-base-content">
+            <footer className="footer p-10 bg-base-200 text-base-content">
                 <div>
-                    <span class="footer-title">Services</span>
-                    <Link to='/' class="link link-hover">Home</Link>
-                    <Link to='/blog' class="link link-hover">Blog</Link>
-                    <Link to='/myportfolio' class="link link-hover">Portfolio</Link>
-                    <Link to='/signup' class="link link-hover">Signup</Link>
+                    <span className="footer-title">Services</span>
+                    <Link to='/' className="link link-hover">Home</Link>
+                    <Link to='/blog' className="link link-hover">Blog</Link>
+                    <Link to='/myportfolio' className="link link-hover">Portfolio</Link>
+                    <Link to='/signup' className="link link-hover">Signup</Link>
                 </div>
 
                 <div>
-                    <span class="footer-title">Legal</span>
-                    <Link to='' class="link link-hover">Terms of use</Link>
-                    <Link to='' class="link link-hover">Privacy policy</Link>
-                    <Link to='' class="link link-hover">Cookie policy</Link>
+                    <span className="footer-title">Legal</span>
+                    <Link to='' className="link link-hover">Terms of use</Link>
+                    <Link to='' className="link link-hover">Privacy policy</Link>
+                    <Link to='' className="link link-hover">Cookie policy</Link>
                 </div>
                 <div>
-                    <span class="footer-title">Newsletter</span>
-                    <div class="form-control w-80">
-                        <label class="label">
-                            <span class="label-text">Enter your email address</span>
+                    <span className="footer-title">Newsletter</span>
+                    <div className="form-control w-80">
+                        <label className="label">
+                            <span className="label-text">Enter your email address</span>
                         </label>
-                        <div class="relative">
-                            <input type="text" placeholder="username@site.com" class="input input-bordered w-full pr-16" />
-                            <button class="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                        <div className="relative">
+                            <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" />
+                            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
                         </div>
                     </div>
                 </div>

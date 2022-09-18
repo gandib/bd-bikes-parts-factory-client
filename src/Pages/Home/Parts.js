@@ -6,7 +6,7 @@ import DisplayParts from './DisplayParts';
 const Parts = () => {
     const [parts, setParts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/parts')
+        fetch('https://agile-tundra-59085.herokuapp.com/parts')
             .then(res => res.json())
             .then(data => setParts(data));
     }, []);
@@ -22,8 +22,8 @@ const Parts = () => {
             <h2 className='mt-10 text-5xl font-bold'>Parts</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-3'>
                 {
-                    descParts.slice(0, 6).map(part => <DisplayParts
-                        key={part._id}
+                    descParts.slice(0, 6).map((part, index) => <DisplayParts
+                        key={index}
                         part={part.value}
                     ></DisplayParts>)
                 }
