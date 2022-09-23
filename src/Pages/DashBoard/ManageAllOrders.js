@@ -37,6 +37,7 @@ const ManageAllOrders = () => {
                 console.log(data);
                 if (data) {
                     toast.success("Status updated successfully");
+                    refetch();
                 }
                 else {
                     toast.error("Failed to updated status!");

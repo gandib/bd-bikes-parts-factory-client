@@ -10,8 +10,6 @@ import DisplayReview from './DisplayReview';
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     const navigate = useNavigate();
-    const [check, setCheck] = useState();
-
 
     useEffect(() => {
         const getMyReviews = async () => {

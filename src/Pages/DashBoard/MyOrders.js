@@ -1,12 +1,8 @@
-import { signOut } from 'firebase/auth';
 import React from 'react';
-import { useEffect } from 'react';
 import { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
-import axiosPrivate from '../../api/axiosPrivate';
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { toast } from 'react-toastify';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../Shared/Loading';
 import DeleteOrderModal from './DeleteOrderModal';

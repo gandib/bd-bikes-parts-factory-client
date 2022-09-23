@@ -13,6 +13,9 @@ const DisplayReview = ({ review }) => {
 
     }, [review, value]);
 
+    console.log(review.rating);
+
+
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl mb-5">

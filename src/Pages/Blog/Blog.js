@@ -34,7 +34,7 @@ const Blog = () => {
             <div className='mb-5'>Answer:
                 <div className="mockup-code">
                     <pre data-prefix='const'>handleSearchByName = (name)</pre><pre data-prefix=' => {'></pre>
-                    <pre data-prefix="const"><code>findProducts = products.filter(product <pre data-prefix='=>'></pre> product.name.toLowerCase() === name.toLowerCase());
+                    <pre data-prefix="const"><code>findProducts = products.filter(product <pre data-prefix='=>'></pre> product.name.toLowerCase().includes(name));
                         setSearchedProduct(findProducts);
                         <pre data-prefix='}'></pre></code></pre>
                 </div>
