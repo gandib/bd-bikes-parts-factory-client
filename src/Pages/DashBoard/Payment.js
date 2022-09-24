@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../Shared/Loading';
@@ -11,6 +11,7 @@ const stripePromise = loadStripe('pk_test_51LgoZgK79rUC6lA1ZTZO0CCHKVoEkbm8E6Q6M
 
 const Payment = () => {
     const { orderId } = useParams();
+    const [stateRefresh, setStateRefresh] = useState(false);
     const url = `https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/order/${orderId}`;
 
     const { data: order, isLoading } = useQuery(['orders', orderId], () =>
@@ -23,6 +24,11 @@ const Payment = () => {
             .then(res => res.json())
     );
     console.log(order)
+    useEffect(() => {
+        if (order?.paid === true) {
+            setStateRefresh(true);
+        }
+    }, [order?.paid]);
 
     if (isLoading) {
         return <Loading></Loading>
