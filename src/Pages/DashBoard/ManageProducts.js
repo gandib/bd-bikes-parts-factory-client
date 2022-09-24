@@ -6,7 +6,7 @@ import DeleteProductModal from './DeleteProductModal';
 const ManageProducts = () => {
     const [deleteProduct, setDeleteProduct] = useState(null);
     const { data: allParts, isLoading, refetch } = useQuery(['allProducts'], () =>
-        fetch(`https://rocky-sierra-81256.herokuapp.com/parts`, {
+        fetch(`https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/parts`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }

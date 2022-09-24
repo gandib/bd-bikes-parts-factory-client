@@ -32,7 +32,7 @@ const AddProduct = () => {
                         minOrderQty: parseInt(data.minOrderQty)
                     }
                     // send to database
-                    fetch('https://rocky-sierra-81256.herokuapp.com/parts', {
+                    fetch('https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/parts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

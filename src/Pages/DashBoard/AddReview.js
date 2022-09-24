@@ -17,7 +17,7 @@ const AddReview = () => {
             description: event.target.description.value,
             rating: ratingValue
         }
-        fetch('https://rocky-sierra-81256.herokuapp.com/review', {
+        fetch('https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

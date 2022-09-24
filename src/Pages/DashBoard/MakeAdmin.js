@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 
 const MakeAdmin = () => {
     const { data: users, isLoading, refetch } = useQuery(['users'], () =>
-        fetch(`https://rocky-sierra-81256.herokuapp.com/user`, {
+        fetch(`https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/user`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -19,7 +19,7 @@ const MakeAdmin = () => {
 
 
     const makeAdmin = (email) => {
-        fetch(`https://rocky-sierra-81256.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

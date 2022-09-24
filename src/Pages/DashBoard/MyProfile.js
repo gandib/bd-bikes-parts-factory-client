@@ -16,7 +16,7 @@ const MyProfile = () => {
 
 
     useEffect(() => {
-        fetch(`https://rocky-sierra-81256.herokuapp.com/userprofiles/${user?.email}`, {
+        fetch(`https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/userprofiles/${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -44,7 +44,7 @@ const MyProfile = () => {
             linkedin: linkedin
         }
         // send to database
-        const url = `https://rocky-sierra-81256.herokuapp.com/userprofile/${user?.email}`;
+        const url = `https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/userprofile/${user?.email}`;
         fetch(url, {
             method: 'PUT',
             headers: {

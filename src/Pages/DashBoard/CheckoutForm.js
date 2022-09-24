@@ -17,7 +17,7 @@ const CheckoutForm = ({ order }) => {
 
 
     useEffect(() => {
-        fetch('https://rocky-sierra-81256.herokuapp.com/create-payment-intent', {
+        fetch('https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -27,6 +27,7 @@ const CheckoutForm = ({ order }) => {
         })
             .then(res => res.json())
             .then(data => {
+                console.log(data)
                 if (data.clientSecret) {
                     setClientSecret(data.clientSecret);
                 }
@@ -83,7 +84,7 @@ const CheckoutForm = ({ order }) => {
                 order: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://rocky-sierra-81256.herokuapp.com/order/${_id}`, {
+            fetch(`https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -102,6 +103,7 @@ const CheckoutForm = ({ order }) => {
     if (processing) {
         return <Loading></Loading>
     }
+
 
     return (
         <>

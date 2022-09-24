@@ -5,7 +5,7 @@ const DeleteOrderModal = ({ deleteOrder, setDeleteOrder, refetch }) => {
     const { partsName, _id } = deleteOrder;
 
     const handleDelete = async () => {
-        const url = `https://rocky-sierra-81256.herokuapp.com/order/${_id}`;
+        const url = `https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/order/${_id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {

@@ -13,7 +13,7 @@ const MyOrders = () => {
 
 
     const { data: orders, isLoading, refetch } = useQuery(['order'], () =>
-        fetch(`https://rocky-sierra-81256.herokuapp.com/order?email=${user?.email}`, {
+        fetch(`https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/order?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }

@@ -13,7 +13,7 @@ const Reviews = () => {
 
     useEffect(() => {
         const getMyReviews = async () => {
-            const url = `https://rocky-sierra-81256.herokuapp.com/review`;
+            const url = `https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/review`;
             try {
                 const { data } = await axiosPrivate.get(url);
                 setReviews(data);

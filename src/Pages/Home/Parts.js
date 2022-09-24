@@ -6,7 +6,7 @@ import DisplayParts from './DisplayParts';
 const Parts = () => {
     const [parts, setParts] = useState([]);
     useEffect(() => {
-        fetch('https://rocky-sierra-81256.herokuapp.com/parts')
+        fetch('https://bd-bike-parts-factory-server-e5dcruwo6-gandib.vercel.app/parts')
             .then(res => res.json())
             .then(data => setParts(data));
     }, []);
