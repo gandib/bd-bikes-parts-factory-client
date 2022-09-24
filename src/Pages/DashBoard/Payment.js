@@ -34,6 +34,7 @@ const Payment = () => {
                     <p className='text-success font-bold'>Hello, {order?.name}</p>
                     <h2 className="card-title">Please pay for <span className='text-yellow-500'>{order?.partsName}</span></h2>
                     <p>Please pay: ${order?.totalPrice}</p>
+                    {order?.paid === true && <p className='text-green-500 font-bold'>Paid</p>}
                 </div>
             </div>
             <div className="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">

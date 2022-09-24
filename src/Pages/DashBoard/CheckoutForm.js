@@ -13,7 +13,7 @@ const CheckoutForm = ({ order }) => {
     const [transactionId, setTransactionId] = useState('');
     const [clientSecret, setClientSecret] = useState('');
 
-    const { _id, totalPrice, email, name } = order;
+    const { _id, totalPrice, email, name, paid } = order;
 
 
     useEffect(() => {
@@ -124,7 +124,7 @@ const CheckoutForm = ({ order }) => {
                         },
                     }}
                 />
-                <button className='btn btn-sm btn-success mt-4' type="submit" disabled={!stripe || !clientSecret || success}>
+                <button className='btn btn-sm btn-success mt-4' type="submit" disabled={!stripe || !clientSecret || success || paid === true}>
                     Pay
                 </button>
             </form>
